@@ -16,9 +16,9 @@ const analyzer = {
 
   getCharacterCountExcludingSpaces: (text) => {
     //TODO: esta función debe retornar el recuento de caracteres excluyendo espacios y signos de puntuación que se encuentran en el parámetro `text` de tipo `string`.
-    const words = text.split(" ").join("");
-    const characterCount = words.length;
-    return characterCount;
+    const words = text.match(/[a-zA-Z]/g);
+    const characterCountExcludingSpaces = words.length;
+    return characterCountExcludingSpaces;
   },
   getAverageWordLength: (text) => {    
     //TODO: esta función debe retornar la longitud media de palabras que se encuentran en el parámetro `text` de tipo `string`.

@@ -8,6 +8,12 @@ const areabox = document.querySelector("textarea");
 
 resetButton.addEventListener("click",function() {
     areabox.value = "";
+    wordCount.textContent = "Palabras "
+    characterCount.textContent = "Caracteres "
+    characterNoSpacesCount.textContent = "Caracteres sin espacio "
+    numberCount.textContent = "Numeros "
+    numberSum.textContent = "Suma numeros "
+    wordLength.textContent = "Promedio Longitud "
 })
 
 //para las funciones de los elementos
@@ -24,46 +30,21 @@ areabox.addEventListener("input",function(){
     //guardar el input ingresado
     const inputText = areabox.value;
     //llamar al analyzer con el valor del argumento guardado
-    const updatedText = analyzer.getWordCount(inputText)
-    wordCount.textContent = "Palabras " + updatedText
-})
+    const wordCountText = analyzer.getWordCount(inputText)
+    wordCount.textContent = "Palabras " + wordCountText
 
-areabox.addEventListener("input",function(){
-    //guardar el input ingresado
-    const inputText = areabox.value;
-    //llamar al analyzer con el valor del argumento guardado
-    const updatedText = analyzer.getCharacterCount(inputText)
-    characterCount.textContent = "Caracteres " + updatedText
-})
+    const characterCountText = analyzer.getCharacterCount(inputText)
+    characterCount.textContent = "Caracteres " + characterCountText
 
-areabox.addEventListener("input",function(){
-    //guardar el input ingresado
-    const inputText = areabox.value;
-    //llamar al analyzer con el valor del argumento guardado
-    const updatedText = analyzer.getCharacterCountExcludingSpaces(inputText)
-    characterNoSpacesCount.textContent = "Caracteres sin espacio " + updatedText
-})
+    const characterCountExcludingSpacesText = analyzer.getCharacterCountExcludingSpaces(inputText)
+    characterNoSpacesCount.textContent = "Caracteres sin espacio " + characterCountExcludingSpacesText
 
-areabox.addEventListener("input",function(){
-    //guardar el input ingresado
-    const inputText = areabox.value;
-    //llamar al analyzer con el valor del argumento guardado
-    const updatedText = analyzer.getNumberCount(inputText)
-    numberCount.textContent = "Numeros " + updatedText
-})
+    const numberCountText = analyzer.getNumberCount(inputText)
+    numberCount.textContent = "Numeros " + numberCountText
 
-areabox.addEventListener("input",function(){
-    //guardar el input ingresado
-    const inputText = areabox.value;
-    //llamar al analyzer con el valor del argumento guardado
-    const updatedText = analyzer.getNumberSum(inputText)
-    numberSum.textContent = "Suma numeros " + updatedText
-})
+    const numberSumText = analyzer.getNumberSum(inputText)
+    numberSum.textContent = "Suma numeros " + numberSumText
 
-areabox.addEventListener("input",function(){
-    //guardar el input ingresado
-    const inputText = areabox.value;
-    //llamar al analyzer con el valor del argumento guardado
-    const updatedText = analyzer.getAverageWordLength(inputText)
-    wordLength.textContent = "Promedio Longitud " + updatedText
+    const averageWordLengthText = analyzer.getAverageWordLength(inputText)
+    wordLength.textContent = "Promedio Longitud " + averageWordLengthText
 })
