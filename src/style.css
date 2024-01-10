@@ -4,25 +4,27 @@ ul {
 }
 
 li {
-    border: 5px solid gray;
+    border: 2px solid rgb(72, 187, 43);
     padding: 5px;
     width: fit-content;
     margin-bottom: 10px;
+    background-color: rgb(72, 187, 43);
+    font-size: 25px;
+    color: white;
 }
 
 header {
-    border-style: solid;
-    background-color: lightblue;
-    width: fit-content;
-    padding: 5px;
+    color: white
 }
 
 #reset-button {
-    background-color: aqua;
+    background-color: rgb(72, 187, 43);
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 15px;
     width: fit-content;
+    color: white;
+    font-size: 20px;
 }
 
 section {
@@ -35,5 +37,17 @@ div {
     justify-content: center;
 }
 
+body {
+    background-image: url(https://images5.alphacoders.com/661/thumb-1920-661716.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+  }
 
-
+footer {
+    font-size: 17px;
+    color: white;
+    border: 2px solid rgb(72, 187, 43);
+    width: fit-content;
+    background-color: rgb(72, 187, 43);
+}
