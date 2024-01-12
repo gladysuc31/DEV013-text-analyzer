@@ -35,6 +35,8 @@ const analyzer = {
     // calcular la longitud de cada palabra
     // calcular el promedio 
     const words = text.split(/\s+/);
+
+    
     let wordLength = 0;
 
     for (const currentWord of words) {
@@ -42,16 +44,20 @@ const analyzer = {
     }
 
     const average = wordLength / words.length;
-    return average.toFixed(2);
+    return parseFloat(average.toFixed(2));
   },
   getNumberCount: (text) => {
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
     const numbers = text;
     let numberCounter = 0;
     
-    for (let i = 0; i.match(/\d+/g); i++) {
-      return numberCounter;
-  }
+    for (let i = 0; i < numbers.length; i++) {
+      if (numbers[i].match(/\d+/g)) {
+        numberCounter++;
+      }
+    }
+    
+    return numberCounter;
   },
   getNumberSum: (text) => {
     //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
@@ -73,8 +79,6 @@ const analyzer = {
     for (const num of numbersArray){
       totalSum += num;
     } 
-    return totalSum;
-    },
-  };
-
+    return totalSum;},
+};
 export default analyzer;

@@ -7,13 +7,13 @@ const resetButton = document.getElementById("reset-button");
 const areabox = document.querySelector("textarea");
 
 resetButton.addEventListener("click",function() {
-    areabox.value = "";
-    wordCount.textContent = "Palabras "
-    characterCount.textContent = "Caracteres "
-    characterNoSpacesCount.textContent = "Caracteres sin espacio "
-    numberCount.textContent = "Numeros "
-    numberSum.textContent = "Suma numeros "
-    wordLength.textContent = "Promedio Longitud "
+  areabox.value = "";
+  wordCount.textContent = "Palabras "
+  characterCount.textContent = "Caracteres "
+  characterNoSpacesCount.textContent = "Caracteres sin espacio "
+  numberCount.textContent = "Numeros "
+  numberSum.textContent = "Suma numeros "
+  wordLength.textContent = "Promedio Longitud "
 })
 
 //para las funciones de los elementos
@@ -27,24 +27,24 @@ const wordLength = document.querySelector("[data-testid=word-length-average]")
 
 // agregar un event listener
 areabox.addEventListener("input",function(){
-    //guardar el input ingresado
-    const inputText = areabox.value;
-    //llamar al analyzer con el valor del argumento guardado
-    const wordCountText = analyzer.getWordCount(inputText)
-    wordCount.textContent = "Palabras " + wordCountText
+  //guardar el input ingresado
+  const inputText = areabox.value;
+  //llamar al analyzer con el valor del argumento guardado
+  const wordCountText = analyzer.getWordCount(inputText)
+  wordCount.textContent = "Palabras " + wordCountText
 
-    const characterCountText = analyzer.getCharacterCount(inputText)
-    characterCount.textContent = "Caracteres " + characterCountText
+  const characterCountText = analyzer.getCharacterCount(inputText)
+  characterCount.textContent = "Caracteres " + characterCountText
 
-    const characterCountExcludingSpacesText = analyzer.getCharacterCountExcludingSpaces(inputText)
-    characterNoSpacesCount.textContent = "Caracteres sin espacio " + characterCountExcludingSpacesText
+  const characterCountExcludingSpacesText = analyzer.getCharacterCountExcludingSpaces(inputText)
+  characterNoSpacesCount.textContent = "Caracteres sin espacio " + characterCountExcludingSpacesText
 
-    const numberCountText = analyzer.getNumberCount(inputText)
-    numberCount.textContent = "Numeros " + numberCountText
+  const numberCountText = analyzer.getNumberCount(inputText)
+  numberCount.textContent = "Numeros " + numberCountText
 
-    const numberSumText = analyzer.getNumberSum(inputText)
-    numberSum.textContent = "Suma numeros " + numberSumText
+  const numberSumText = analyzer.getNumberSum(inputText)
+  numberSum.textContent = "Suma numeros " + numberSumText
 
-    const averageWordLengthText = analyzer.getAverageWordLength(inputText)
-    wordLength.textContent = "Promedio Longitud " + averageWordLengthText
+  const averageWordLengthText = analyzer.getAverageWordLength(inputText)
+  wordLength.textContent = "Promedio Longitud " + averageWordLengthText
 })
