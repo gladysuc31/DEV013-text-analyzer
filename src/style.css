@@ -3,7 +3,7 @@ ul {
     list-style: none;
 }
 
-li {
+.elements {
     border: 2px solid rgb(72, 187, 43);
     padding: 5px;
     width: fit-content;
@@ -11,6 +11,10 @@ li {
     background-color: rgb(72, 187, 43);
     font-size: 25px;
     color: white;
+}
+
+textarea[name="user-input"] {
+    resize: none;
 }
 
 header {

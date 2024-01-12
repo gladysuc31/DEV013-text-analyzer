@@ -48,13 +48,10 @@ const analyzer = {
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
     const numbers = text;
     let numberCounter = 0;
-
-    for (const num of numbers) {
-      if (num.match(/\d+/g)){
-        numberCounter++;
-      }
-    }
-    return numberCounter;
+    
+    for (let i = 0; i.match(/\d+/g); i++) {
+      return numberCounter;
+  }
   },
   getNumberSum: (text) => {
     //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
@@ -63,12 +60,12 @@ const analyzer = {
     // sumar los numeros
     // retornar el resultado
     const numbers = text;
-    let numbersArray = [];
+    const numbersArray = [];
     let totalSum = 0;
     
     for (const num of numbers) {
       if (num.match(/\d+/g)) {
-        const number = parseInt(num);
+        const number = parseFloat(num);
         numbersArray.push(number);
       }
     }
