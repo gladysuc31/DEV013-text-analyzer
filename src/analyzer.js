@@ -48,11 +48,11 @@ const analyzer = {
   },
   getNumberCount: (text) => {
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
-    const numbers = text;
+    const numbers = text.split(" ");
     let numberCounter = 0;
     
     for (let i = 0; i < numbers.length; i++) {
-      if (numbers[i].match(/\d+/g)) {
+      if (numbers[i].match(/^[0-9]+(\.[0-9]+)?$/)) {
         numberCounter++;
       }
     }
@@ -65,20 +65,21 @@ const analyzer = {
     // separarlos en un array
     // sumar los numeros
     // retornar el resultado
-    const numbers = text;
+    const words = text.split(" ");
     const numbersArray = [];
     let totalSum = 0;
-    
-    for (const num of numbers) {
-      if (num.match(/\d+/g)) {
-        const number = parseFloat(num);
+
+    for (const word of words){
+      if (word.match(/^[0-9]+(\.[0-9]+)?$/)){
+        const number = parseFloat(word);
         numbersArray.push(number);
       }
     }
-  
+
     for (const num of numbersArray){
       totalSum += num;
     } 
-    return totalSum;},
+    return totalSum;
+  },
 };
 export default analyzer;
