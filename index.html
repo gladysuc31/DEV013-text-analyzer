@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Analizador de texto</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div>
+    <header>
+      <h1>Analizador de Texto</h1>
+    </header>
+  </div>
+
+  <section>
+    <ul>
+      <li class="elements" data-testid="word-count">Palabras</li>
+      <li class="elements" data-testid="character-count">Caracteres</li>
+      <li class="elements" data-testid="character-no-spaces-count">Caracteres sin espacio</li>
+      <li class="elements" data-testid="number-count">Numeros</li>
+      <li class="elements" data-testid="number-sum">Suma numeros</li>
+      <li class="elements" data-testid="word-length-average">Promedio Longitud</li>
+    </ul>
+  </section>
+
+  <div>
+    <textarea name="user-input" rows="15" cols="65"></textarea>
+  </div> <br>
+
+  <div>
+    <button id="reset-button">Reset</button>
+  </div>
+
+  <footer>
+    <p>By: Gladys Ureña</p>
+  </footer>
+
+  <script src="index.js" type="module"></script>
+</body>
+</html>
